@@ -24,5 +24,6 @@ if (isset($_POST['submit']))
         die;
     }
     echo '<br>'.'Card number is good!';
+    echo '<br>'.'Card number is good!';
 
 }
