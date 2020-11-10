@@ -1,14 +1,5 @@
 <?php
 
-class InvalidCardNumberException extends Exception
-{
-    public function __construct()
-    {
-        $message = '<br>'.'ERROR! Invalid card number';
-        parent::__construct($message);
-    }
-}
-
 class CardValidator
 {
     public static function check($array)
