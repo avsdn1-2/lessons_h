@@ -17,13 +17,15 @@ if (isset($_POST['submit']))
     }
     echo 'card number = '.$data.'<br>';
 
-    //валидируем данные формы, бросаем и ловим исключение
-    try {
-        CardValidator::check($arr);
-    }catch (InvalidCardNumberException $e){
-        echo $e->getMessage();
-        die;
+    //валидируем номер карты
+    if (CardValidator::check($arr) == true)
+    {
+        echo 'Card number is valid!';
     }
-    echo '<br>'.'Card number is good!';
+    else
+    {
+        echo 'Card number is invalid!';
+    }
+
 
 }
