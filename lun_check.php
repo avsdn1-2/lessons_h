@@ -24,11 +24,9 @@ class FormConstructor
         return $formHtml;
     }
 }
-
+echo 'Введите номер карты'.'<br>';
 $formConstructor = new FormConstructor();
-
 $formConstructor->card_number = 'card number';
-
 echo $formConstructor->render();
 
 
