@@ -1,7 +1,10 @@
 <?php
+header('Content-Type: text/html; charset=utf-8');
 
 try {
     $dbh = new PDO('mysql:host=localhost;dbname=student', 'root', '');
+    $dbh->exec("set names utf8");
+
     //запрос на SELECT
     $data = $dbh->query('SELECT * FROM clients');
     echo 'Список всех клиентов'.'<br>';
@@ -25,9 +28,9 @@ try {
         var_dump($row);
     }
 
-    $data = $dbh->query("SELECT * FROM clients WHERE name LIKE 'J%'");
-    echo 'Список клиентов имя которых начинается на J'.'<br>';
-    echo 'SELECT * FROM clients WHERE name LIKE \'J%\''.'<br>';
+    $data = $dbh->query("SELECT * FROM clients WHERE name LIKE 'В%'");
+    echo 'Список клиентов имя которых начинается на В'.'<br>';
+    echo 'SELECT * FROM clients WHERE name LIKE \'В%\''.'<br>';
     while ($row = $data->fetch(PDO::FETCH_ASSOC))
     {
         var_dump($row);

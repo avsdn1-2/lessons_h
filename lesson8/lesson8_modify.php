@@ -10,17 +10,17 @@ try {
     $preparedQuery->bindParam(':name',$name);
     $preparedQuery->bindParam(':is_active',$is_active);
     $age = 20;
-    $name = 'Marco Van Basten';
+    $name = 'Марко Ван Бастен';
     $is_active = 1;
     $preparedQuery->execute();
 
     $age = 34;
-    $name = 'Dan Mitchel';
+    $name = 'Серхи Рамос';
     $is_active = 1;
     $preparedQuery->execute();
 
     $age = 37;
-    $name = 'Kevin Costner';
+    $name = 'Стив Маккейн';
     $is_active = 1;
     $preparedQuery->execute();
 
